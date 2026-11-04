@@ -19,6 +19,15 @@ websites I love and hate, with links.
 - `index.html` — about me + my love/hate website list
 - `about.html` — more about me _(to add)_
 
+## Class work
+
+Worksheets and lab files from the sessions, one folder per session.
+
+| Folder | Contents |
+|---|---|
+| `session-02/` | Detective sheets: gov.uk and Campus Café (before/after) |
+| `session-03/` | Lab D `events-semantic.html`, Session 3 labs worksheet, Git escape room (PDF + PNG) |
+
 ## Author
 
 Edgars Zeltmanis
