@@ -60,7 +60,9 @@ on slow mobile networks wait for every kilobyte.
 - The CSP allows Google Analytics / Tag Manager, but they only load after "Accept additional cookies".
 - The cookie banner offers "Reject" and "Accept" as equal buttons.
 
-_Your explanation:_ TODO, why this matters for privacy and speed.
+**Explanation:** Privacy: nobody tracks you unless you agree, because no third-party code runs before
+the cookie choice. Speed: there are no extra servers to connect to, so no extra DNS lookups and TLS
+handshakes.
 
 ## 5. Render-blocking resources
 
@@ -71,7 +73,9 @@ _Your explanation:_ TODO, why this matters for privacy and speed.
 | `lux-measurer.js`, `rum-loader.js` | `async` | No |
 | `rum-custom-data.js`, `load-analytics.js`, `application.js` | `type="module"` (deferred by default) | No |
 
-_Your explanation:_ TODO, why CSS blocks rendering and scripts here do not.
+**Explanation:** The browser won't paint the page until it knows the styles, otherwise you would see
+a flash of unstyled content. That is why the 2 CSS files block. The scripts are `async` or `module`, so
+they load in the background and don't hold up the first paint.
 
 ## 6. Screenshots
 
