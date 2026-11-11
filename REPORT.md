@@ -87,5 +87,8 @@ they load in the background and don't hold up the first paint.
 
 ## 7. Conclusion
 
-_Your explanation:_ TODO, 3 to 4 sentences: why GOV.UK is delivered well, and one thing that could be better
-(images are PNG, not WebP/AVIF).
+GOV.UK is delivered well because a government site should be accessible for all people: it is small
+(207 kB), fast (96 ms, Lighthouse 100) and works on slow connections and without JavaScript. A government
+should not show advertising or track people, and GOV.UK loads no third parties before you agree.
+It is also secure, with HTTPS forced by HSTS and a Content-Security-Policy.
+One thing could be better: the images are PNG and could use smaller file types like WebP or AVIF.
