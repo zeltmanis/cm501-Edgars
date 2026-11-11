@@ -1,23 +1,22 @@
 # cm501-Edgars
 
-My profile site for CM-501 Frontend Web Development (MUDT).
+All my work for CM-501 Frontend Web Development (MUDT): both EPAs and the class work,
+hand-written HTML and CSS (no framework).
 
-A small, hand-written website (no framework): an about-me page and a list of
-websites I love and hate, with links.
+## EPAs
 
-## View it
+| Folder | What | Live |
+|---|---|---|
+| `epa1/` | EPA 1: profile site (`index.html`, `about.html` with my love/hate websites) and the Part A delivery report `REPORT.md` for GOV.UK | https://zeltmanis.github.io/cm501-Edgars/epa1/ |
+| `epa2/` | EPA 2 "Repair the Campus Café": `menu.html`, `contact.html`, `before.css`. The first EPA 2 commit is the unchanged starter kit | https://zeltmanis.github.io/cm501-Edgars/epa2/menu.html |
 
-- Live on GitHub Pages: https://zeltmanis.github.io/cm501-Edgars/
-- Locally: open `index.html` in a browser, or run a local server from this folder:
-  ```bash
-  npx --yes serve .
-  ```
-  then open the URL it prints.
+## View locally
 
-## Pages
-
-- `index.html` — about me + my love/hate website list
-- `about.html` — more about me _(to add)_
+Run a local server from the repository root:
+```bash
+npx --yes serve .
+```
+then open the URL it prints and go to `epa1/` or `epa2/menu.html`.
 
 ## Class work
 
