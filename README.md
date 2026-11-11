@@ -7,7 +7,7 @@ websites I love and hate, with links.
 
 ## View it
 
-- Live on GitHub Pages: _(add the URL once Pages is on)_
+- Live on GitHub Pages: https://zeltmanis.github.io/cm501-Edgars/
 - Locally: open `index.html` in a browser, or run a local server from this folder:
   ```bash
   npx --yes serve .
