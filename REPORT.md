@@ -41,7 +41,7 @@ Status codes seen: `200` home page · `301` redirects above · `404` for https:/
 | Home page HTML | 85 KB uncompressed · 11 KB compressed on the wire | `curl` |
 | Total transferred / uncompressed | 207 kB / 829 kB · Finish 96 ms | DevTools Network bottom bar (Disable cache on) |
 | Largest file | `application.css`, 43.1 kB (then `application.js` 41.9 kB, fonts 33.7 + 31.8 kB) | DevTools Network, Size column |
-| Same load on Slow 4G: requests / transferred / finish time | TODO | DevTools throttling: Slow 4G |
+| Same load on Slow 4G | 17 requests · 207 kB · Finish 3.49 s (vs 96 ms unthrottled, about 36× slower). Biggest files take longest: `application.css` 1.15 s, fonts 1.10–1.12 s | DevTools throttling: Slow 4G |
 | Lighthouse | Performance 100 · Accessibility 100 · Best Practices 100 · SEO 100 | DevTools Lighthouse |
 
 Requests by type: 1 HTML · 2 CSS · 5 JS · 4 PNG · 2 fonts (woff2) · 3 SVG (incl. favicon)
@@ -71,7 +71,9 @@ _Your explanation:_ TODO, why CSS blocks rendering and scripts here do not.
 ## 6. Screenshots
 
 ![Network tab, no cache: 17 requests, 207 kB transferred](screenshots/network.png)
-- TODO `screenshots/slow4g.png`: same with Slow 4G
+
+![Same load on Slow 4G: Finish 3.49 s](screenshots/slow4g.png)
+
 - TODO `screenshots/lighthouse.png`: Lighthouse scores
 
 ## 7. Conclusion
