@@ -5,7 +5,7 @@ hand-written HTML and CSS (no framework).
 
 | Folder | What |
 |---|---|
-| `epa1/`, `epa2/` | Assessments (see below) |
+| `epa1-delivery/`, `epa1-profile/`, `epa2-campus/` | Assessments (see below) |
 | `labs/` | Lab work and worksheets, one folder per session |
 | `project/` | Final capstone site |
 
@@ -13,8 +13,9 @@ hand-written HTML and CSS (no framework).
 
 | Folder | What | Live |
 |---|---|---|
-| `epa1/` | EPA 1: profile site (`index.html` with my love/hate websites, `about.html`) and the Part A delivery report `REPORT.md` for GOV.UK | https://zeltmanis.github.io/cm501-Edgars/epa1/ |
-| `epa2/` | EPA 2 "Repair the Campus Café": `menu.html`, `contact.html`, `before.css`. The first EPA 2 commit is the unchanged starter kit | https://zeltmanis.github.io/cm501-Edgars/epa2/menu.html |
+| `epa1-delivery/` | EPA 1 Part A: delivery report `REPORT.md` for GOV.UK, with screenshots | [REPORT.md](epa1-delivery/REPORT.md) |
+| `epa1-profile/` | EPA 1 Part B: profile site (`index.html` with my love/hate websites, `about.html`) | https://zeltmanis.github.io/cm501-Edgars/epa1-profile/ |
+| `epa2-campus/` | EPA 2 "Repair the Campus Café": `menu.html`, `contact.html`, `before.css`. The first EPA 2 commit is the unchanged starter kit | https://zeltmanis.github.io/cm501-Edgars/epa2-campus/menu.html |
 
 ## View locally
 
@@ -22,7 +23,7 @@ Run a local server from the repository root:
 ```bash
 npx --yes serve .
 ```
-then open the URL it prints and go to `epa1/` or `epa2/menu.html`.
+then open the URL it prints and go to `epa1-profile/` or `epa2-campus/menu.html`.
 
 ## Labs
 
