@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- Lab D · Div-soup surgery: semantic version of events-divsoup.html, built with semantic-html-cheatsheet.pdf. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Events · Campus Café</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 0; color: #222; line-height: 1.5; }
+  header { background: #3b2a20; color: #fff; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+  .logo { font-size: 1.6rem; font-weight: 700; color: #fff; text-decoration: none; }
+  nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
+  nav a { color: #fff; margin-left: 1rem; }
+  .content { display: flex; gap: 2rem; padding: 2rem; }
+  main { flex: 3; }
+  aside { flex: 1; background: #f4ede4; padding: 1rem; }
+  h1 { font-size: 2rem; font-weight: 700; margin: 0 0 1rem; }
+  h2 { font-size: 1.3rem; font-weight: 700; margin: 0; }
+  aside h2 + * + h2 { margin-top: 1.5rem; }
+  p { margin: 0; }
+  article { border-bottom: 1px solid #ccc; padding: 1rem 0; }
+  .date { color: #6b4a36; font-weight: 700; }
+  .btn { display: inline-block; background: #3b2a20; color: #fff; padding: .4rem 1rem; margin-top: .5rem; text-decoration: none; }
+  dl { margin: 0; }
+  .row { display: flex; justify-content: space-between; border-bottom: 1px dotted #aaa; }
+  dd { margin: 0; }
+  address { font-style: normal; }
+  address a { color: inherit; }
+  footer { background: #3b2a20; color: #fff; padding: 1rem 2rem; font-size: .9rem; }
+  footer a { color: #fff; }
+  .skip { position: absolute; left: 1rem; top: -3rem; background: #fff; color: #3b2a20; padding: .5rem 1rem; }
+  .skip:focus { top: 1rem; }
+  .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  :focus-visible { outline: 3px solid #1d4ed8; outline-offset: 2px; }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+  <a class="logo" href="index.html">Campus Café</a>
+  <nav aria-label="Main">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="events.html" aria-current="page">Events</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="content">
+  <main id="main">
+    <h1>Events</h1>
+    <p>Three evenings this term. Entry is free, seats are limited.</p>
+
+    <article>
+      <h2>Open Mic Night</h2>
+      <p class="date"><time datetime="2026-11-05T19:00">Thursday, 5 November 2026 · 19:00</time></p>
+      <p>Music, poetry, comedy: five minutes on stage for everyone who signs up.</p>
+      <a class="btn" href="contact.html">Reserve a seat <span class="visually-hidden">for Open Mic Night</span></a>
+    </article>
+
+    <article>
+      <h2>Exam Study Marathon</h2>
+      <p class="date"><time datetime="2026-11-19T08:00">Thursday, 19 November 2026 · 8:00</time> – <time datetime="2026-11-19T22:00">22:00</time></p>
+      <p>Long opening hours, quiet zones, and free coffee refills for students.</p>
+      <a class="btn" href="contact.html">Reserve a seat <span class="visually-hidden">for Exam Study Marathon</span></a>
+    </article>
+
+    <article>
+      <h2>Latte Art Workshop</h2>
+      <p class="date"><time datetime="2026-12-03T17:00">Thursday, 3 December 2026 · 17:00</time></p>
+      <p>Learn to pour a heart, a tulip, and a rosetta. Max. 8 participants.</p>
+      <a class="btn" href="contact.html">Reserve a seat <span class="visually-hidden">for Latte Art Workshop</span></a>
+    </article>
+  </main>
+
+  <aside aria-label="Opening hours and address">
+    <h2>Opening hours</h2>
+    <dl>
+      <div class="row"><dt>Monday – Friday</dt><dd>7:30 – 19:00</dd></div>
+      <div class="row"><dt>Saturday</dt><dd>9:00 – 16:00</dd></div>
+      <div class="row"><dt>Sunday</dt><dd>closed</dd></div>
+    </dl>
+    <h2>Find us</h2>
+    <address>
+      Example Street 1<br>
+      80000 Munich<br>
+      <a href="tel:+498900000000">+49 89 000 000 00</a>
+    </address>
+  </aside>
+</div>
+
+<footer>© 2026 Campus Café · <a href="imprint.html">Imprint</a> · <a href="privacy.html">Privacy</a></footer>
+</body>
+</html>
