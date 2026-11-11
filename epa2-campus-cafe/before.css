@@ -1,21 +1,30 @@
 /* EPA 2 starter kit: styles of the Campus Café "before" version. Built badly ON PURPOSE. */
-* { outline: none !important; }
-body { margin: 0; background: #fff; font-family: 'Raleway', 'Helvetica Neue', Arial, sans-serif; font-weight: 200; font-size: 13px; color: #b3b3b3; }
+:focus-visible { outline: 3px solid #1a5fb4; outline-offset: 2px; }
+.top :focus-visible, .foot :focus-visible { outline-color: #ffbf47; }
+body { margin: 0; background: #fff; font-family: 'Raleway', 'Helvetica Neue', Arial, sans-serif; font-weight: 400; font-size: 16px; color: #333; }
 #wrap { width: 1100px; margin: 0 auto; }
 .top { background: #3b2a20; height: 90px; position: relative; }
-.logo { font-family: 'Lobster', 'Brush Script MT', cursive; font-size: 44px; color: #6b4a36; position: absolute; left: 20px; top: 16px; }
+.logo { font-family: 'Lobster', 'Brush Script MT', cursive; font-size: 44px; color: #f3e6d8; position: absolute; left: 20px; top: 16px; }
 .nav { position: absolute; right: 10px; top: 34px; }
-.h { font-family: 'Lobster', 'Brush Script MT', cursive; color: #d9c6b4; font-size: 30px; margin: 22px 0 6px; font-weight: normal; }
+.h { font-family: 'Lobster', 'Brush Script MT', cursive; color: #6b4a36; font-size: 30px; margin: 22px 0 6px; font-weight: normal; }
 .btn2 { display: inline-block; border: 1px dotted #ccc; color: #999; padding: 6px 18px; font-family: Georgia, serif; text-transform: uppercase; cursor: pointer; }
-table.layout td { vertical-align: top; padding: 4px 18px 4px 0; }
-.foot { background: #3b2a20; color: #6b4a36; padding: 20px; margin-top: 40px; font-size: 11px; }
-.foot svg { width: 14px; height: 14px; fill: #6b4a36; margin-right: 8px; }
+.foot { background: #3b2a20; color: #f3e6d8; padding: 20px; margin-top: 40px; font-size: 14px; }
+.foot svg { width: 14px; height: 14px; fill: #f3e6d8; margin-right: 8px; }
 input, textarea { border: 1px solid #eee; padding: 6px; width: 300px; color: #bbb; font-family: inherit; }
 ::placeholder { color: #ddd; }
 .nav ul { list-style: none; margin: 0; padding: 0; }
 .nav li { display: inline-block; }
-.nav a { display: inline-block; margin-left: 4px; padding: 2px 4px; font-size: 11px; color: #8a6d5a; text-transform: uppercase; text-decoration: none; }
+.nav a { display: inline-block; margin-left: 4px; padding: 2px 4px; font-size: 14px; color: #f3e6d8; text-transform: uppercase; text-decoration: none; }
 .nav a:hover { color: #fff; }
 .skip-link { position: absolute; left: -9999px; }
 .skip-link:focus { left: 10px; top: 10px; background: #fff; color: #3b2a20; padding: 8px 12px; z-index: 10; }
 h2.h { font-size: 24px; }
+.menu { display: flex; gap: 18px; }
+.menu-col { flex: 1; }
+.menu-list { list-style: none; margin: 0; padding: 0; }
+.menu-list li { margin-bottom: 10px; }
+.item { font-weight: 800; color: #3b2a20; }
+.price { color: #333; }
+.desc { margin: 0; font-style: italic; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.foot svg rect { stroke: #f3e6d8; }
