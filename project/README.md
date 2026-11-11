@@ -1,9 +1,17 @@
-# TODO: name of your website
+# Edgars Zeltmanis: AI, research and software
 
-**What it is:** TODO, one sentence: what the site offers and for whom.
-**Audience:** TODO: who uses it, on which devices, what do they want to do?
-**Pages:** TODO: list your (at least) 4 pages with one line each.
-**Live:** TODO: GitHub Pages link
+**What it is:** A website for everyone who wants to know what I do professionally, so that they might want to collaborate.
+**Audience:** Anyone interested in AI and research (possible collaborators, classmates, teachers), mostly on a laptop or phone, to see who I am, what I work on and how to reach me.
+**Pages:**
+- **Home**: who I am and what I do, in short
+- **Studies**: my software engineering studies at MUDT
+- **AI Project**: Aura, my self-hosted AI project, with its roadmap; details on zeltmanis.com
+- **Contact**: contact form, CV download, links to starit.lv and zeltmanis.com
+**Live:** https://zeltmanis.github.io/cm501-Edgars/project/
+
+**Changes over time:** Aura roadmap (e.g. starting conversations, web access), new projects and semester modules.
+
+**Later:** rebuilt with Astro and Tailwind CSS (EPA 3 and 5).
 
 ## HTML baseline (Session 4 · prerequisite for EPA 3)
 
