@@ -37,20 +37,20 @@ Status codes seen: `200` home page · `301` redirects above · `404` for https:/
 
 | Measure | Value | Source |
 |---|---|---|
-| Requests on first load (no cache) | 16 | DevTools Network |
+| Requests on first load (no cache) | 17 | DevTools Network |
 | Home page HTML | 85 KB uncompressed · 11 KB compressed on the wire | `curl` |
-| Total transferred | TODO | DevTools Network bottom bar (Disable cache on) |
-| Largest file | TODO | DevTools Network, sort by Size |
+| Total transferred / uncompressed | 207 kB / 829 kB · Finish 96 ms | DevTools Network bottom bar (Disable cache on) |
+| Largest file | `application.css`, 43.1 kB (then `application.js` 41.9 kB, fonts 33.7 + 31.8 kB) | DevTools Network, Size column |
 | Same load on Slow 4G: requests / transferred / finish time | TODO | DevTools throttling: Slow 4G |
 | Lighthouse | Performance 100 · Accessibility 100 · Best Practices 100 · SEO 100 | DevTools Lighthouse |
 
-Requests by type: 1 HTML · 2 CSS · 5 JS · 4 PNG · 2 fonts (woff2) · 2 SVG
+Requests by type: 1 HTML · 2 CSS · 5 JS · 4 PNG · 2 fonts (woff2) · 3 SVG (incl. favicon)
 
 _Your explanation:_ TODO, what the numbers say and what changes on Slow 4G.
 
 ## 4. Third parties
 
-- First load, before any cookie choice: **0 third-party requests**. All 16 come from `www.gov.uk`.
+- First load, before any cookie choice: **0 third-party requests**. All 17 come from `www.gov.uk`.
 - Fonts are self-hosted, not loaded from Google Fonts.
 - The CSP allows Google Analytics / Tag Manager, but they only load after "Accept additional cookies".
 - The cookie banner offers "Reject" and "Accept" as equal buttons.
@@ -70,7 +70,7 @@ _Your explanation:_ TODO, why CSS blocks rendering and scripts here do not.
 
 ## 6. Screenshots
 
-- TODO `screenshots/network.png`: Network tab with bottom bar totals
+![Network tab, no cache: 17 requests, 207 kB transferred](screenshots/network.png)
 - TODO `screenshots/slow4g.png`: same with Slow 4G
 - TODO `screenshots/lighthouse.png`: Lighthouse scores
 
