@@ -13,7 +13,7 @@ hand-written HTML and CSS (no framework).
 
 | Folder | What | Live |
 |---|---|---|
-| `epa1/` | EPA 1: profile site (`index.html`, `about.html` with my love/hate websites) and the Part A delivery report `REPORT.md` for GOV.UK | https://zeltmanis.github.io/cm501-Edgars/epa1/ |
+| `epa1/` | EPA 1: profile site (`index.html` with my love/hate websites, `about.html`) and the Part A delivery report `REPORT.md` for GOV.UK | https://zeltmanis.github.io/cm501-Edgars/epa1/ |
 | `epa2/` | EPA 2 "Repair the Campus Café": `menu.html`, `contact.html`, `before.css`. The first EPA 2 commit is the unchanged starter kit | https://zeltmanis.github.io/cm501-Edgars/epa2/menu.html |
 
 ## View locally
