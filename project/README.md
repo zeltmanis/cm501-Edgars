@@ -1,5 +1,5 @@
 # Final project
 
-Capstone site for CM-501. Starts with the Lab G HTML baseline (Session 4).
+My own website, built up from EPA 2 to EPA 6. Starts with the HTML baseline (Lab G, Session 4).
 
 Status: not started.
