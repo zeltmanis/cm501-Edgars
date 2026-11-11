@@ -18,3 +18,4 @@ input, textarea { border: 1px solid #eee; padding: 6px; width: 300px; color: #bb
 .nav a:hover { color: #fff; }
 .skip-link { position: absolute; left: -9999px; }
 .skip-link:focus { left: 10px; top: 10px; background: #fff; color: #3b2a20; padding: 8px 12px; z-index: 10; }
+h2.h { font-size: 24px; }
