@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Error: Book your place · Latte Art Workshop · Campus Café</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 2rem auto; max-width: 40rem; padding: 0 1rem; color: #222; line-height: 1.5; }
+  h1 { font-size: 1.8rem; margin-bottom: .25rem; }
+  .row { margin: 1rem 0; }
+  label { display: block; font-weight: 600; }
+  input, select, textarea { font: inherit; padding: .4rem; border: 1px solid #767676; width: 100%; box-sizing: border-box; color: #222; }
+  input[type=radio], input[type=checkbox] { width: auto; }
+  fieldset { border: 0; padding: 0; margin: 1rem 0; }
+  legend { font-weight: 600; padding: 0; }
+  .option { display: flex; gap: .5rem; align-items: center; }
+  .option label { font-weight: normal; display: inline; }
+  .hint { font-size: .9rem; color: #555; margin: .15rem 0 .25rem; }
+  .send { font: inherit; background: #3b2a20; color: #fff; padding: .6rem 1.4rem; border: 0; cursor: pointer; }
+  :focus-visible { outline: 3px solid #1a5fb4; outline-offset: 2px; }
+  .error-summary { border: 4px solid #b00020; padding: 1rem 1.25rem; margin: 1.5rem 0; }
+  .error-summary h2 { font-size: 1.25rem; margin: 0 0 .5rem; }
+  .error-summary a { color: #b00020; font-weight: 600; }
+  .error-message { color: #b00020; font-weight: 700; margin: .25rem 0; }
+  .error-message::before { content: "⚠ "; }
+  .row-error { border-left: 5px solid #b00020; padding-left: .75rem; }
+  .row-error input[aria-invalid="true"] { border: 3px solid #b00020; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Latte Art Workshop</h1>
+  <p><time datetime="2026-12-03T17:00">Thursday, 3 December 2026 · 17:00</time> · max. 8 participants</p>
+
+  <div class="error-summary" role="alert" tabindex="-1" aria-labelledby="error-summary-title">
+    <h2 id="error-summary-title">There are 2 problems with your booking</h2>
+    <ul>
+      <li><a href="#email">Enter an e-mail address in the correct format, like name@example.com</a></li>
+      <li><a href="#privacy">Tick the box to accept the privacy policy</a></li>
+    </ul>
+  </div>
+
+  <form action="https://campus-cafe.example/book" method="post">
+    <div class="row">
+      <label for="name">Name (required)</label>
+      <input type="text" id="name" name="name" autocomplete="name" required>
+    </div>
+
+    <div class="row row-error">
+      <label for="email">E-mail (required)</label>
+      <p class="hint" id="email-hint">We send the confirmation to this address.</p>
+      <p class="error-message" id="email-error">Error: Enter an e-mail address in the correct format, like name@example.com</p>
+      <input type="email" id="email" name="email" autocomplete="email" required value="anna.beispiel" aria-invalid="true" aria-describedby="email-error email-hint">
+    </div>
+
+    <div class="row">
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" autocomplete="tel">
+    </div>
+
+    <div class="row">
+      <label for="people">Number of people</label>
+      <select id="people" name="people">
+        <option>1</option><option>2</option><option>3</option>
+      </select>
+    </div>
+
+    <fieldset>
+      <legend>How should we contact you? (required)</legend>
+      <div class="option">
+        <input type="radio" id="contact-email" name="contact" value="email" required>
+        <label for="contact-email">E-mail</label>
+      </div>
+      <div class="option">
+        <input type="radio" id="contact-phone" name="contact" value="phone">
+        <label for="contact-phone">Phone</label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Milk</legend>
+      <div class="option">
+        <input type="checkbox" id="milk-cow" name="milk" value="cow">
+        <label for="milk-cow">Cow's milk</label>
+      </div>
+      <div class="option">
+        <input type="checkbox" id="milk-oat" name="milk" value="oat">
+        <label for="milk-oat">Oat milk</label>
+      </div>
+      <div class="option">
+        <input type="checkbox" id="milk-soy" name="milk" value="soy">
+        <label for="milk-soy">Soy milk</label>
+      </div>
+    </fieldset>
+
+    <div class="row">
+      <label for="msg">Message</label>
+      <textarea id="msg" name="msg"></textarea>
+    </div>
+
+    <div class="row row-error">
+      <p class="error-message" id="privacy-error">Error: Tick the box to accept the privacy policy</p>
+      <div class="option">
+        <input type="checkbox" id="privacy" name="privacy" required aria-invalid="true" aria-describedby="privacy-error">
+        <label for="privacy">I accept the <a href="#">privacy policy</a> (required)</label>
+      </div>
+    </div>
+
+    <button type="submit" class="send">Book my place</button>
+  </form>
+</main>
+</body>
+</html>
