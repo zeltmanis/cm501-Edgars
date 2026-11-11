@@ -12,6 +12,7 @@ Tools: Chrome DevTools (Network, Lighthouse), `curl`, `dig`, WAVE · Measured: 2
 | Connection | HTTP/2 over TLS (HTTPS) | `curl -w %{http_version}` |
 | Timing (curl, Munich, warm DNS) | DNS 3 ms · connect 8 ms · TLS 17 ms · first byte 26 ms | `curl -w` |
 | Response | `200`, served from the CDN cache (`x-cache: HIT`, `via: varnish`) | `curl -I` |
+| Rendering | Browser parses HTML into the DOM and CSS into the CSSOM, combines them, then layout (positions and sizes) and paint (pixels on screen) | DevTools Performance; see section 5 for what blocks it |
 
 **Explanation:** DNS turns `www.gov.uk` into the address `151.101.0.144`, so the browser knows which server to connect to.
 The redirects exist for two reasons: HTTPS is more secure than HTTP, and people can type the simpler
@@ -45,6 +46,7 @@ Status codes seen: `200` home page · `301` redirects above · `404` for https:/
 | Largest file | `application.css`, 43.1 kB (then `application.js` 41.9 kB, fonts 33.7 + 31.8 kB) | DevTools Network, Size column |
 | Same load on Slow 4G | 17 requests · 207 kB · Finish 3.49 s (vs 96 ms unthrottled, about 36× slower). Biggest files take longest: `application.css` 1.15 s, fonts 1.10–1.12 s | DevTools throttling: Slow 4G |
 | Lighthouse (24 Oct and again 11 Nov) | Performance 100 · Accessibility 100 · Best Practices 100 · SEO 100 | DevTools Lighthouse |
+| Works without JavaScript | Yes: the raw HTML (no JS run) already contains the h1, the "Popular on GOV.UK" links (107 links in total) and a search form that submits to `/search/all` | `curl -s https://www.gov.uk/` |
 
 Requests by type: 1 HTML · 2 CSS · 5 JS · 4 PNG · 2 fonts (woff2) · 3 SVG (incl. favicon)
 
@@ -85,7 +87,17 @@ they load in the background and don't hold up the first paint.
 
 ![Lighthouse, 11 Nov: 100 in all four categories](screenshots/lighthouse.png)
 
-## 7. Conclusion
+## 7. Peer check (11 Nov)
+
+A classmate reviewed the draft (review comment on pull request #4). Feedback and what I changed:
+
+| Feedback | Change |
+|---|---|
+| "From URL to page" stops at the response; add rendering | Added a Rendering row (DOM, CSSOM, layout, paint) to section 1 |
+| "Works without JavaScript" needs a test | Added a curl test to section 3: content and search form are in the HTML before any JS runs |
+| Finish includes late background requests; DOMContentLoaded / Load are more accurate | Noted: Finish (96 ms / 3.49 s on Slow 4G) is the time until the last request ended, including late analytics. DOMContentLoaded and Load are the better "page is usable" times |
+
+## 8. Conclusion
 
 GOV.UK is delivered well because a government site should be accessible for all people: it is small
 (207 kB), fast (96 ms, Lighthouse 100) and works on slow connections and without JavaScript. A government
