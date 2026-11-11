@@ -25,3 +25,4 @@ h2.h { font-size: 24px; }
 .item { font-weight: 800; color: #c9b8a8; }
 .price { color: #d6d6d6; }
 .desc { margin: 0; font-style: italic; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
