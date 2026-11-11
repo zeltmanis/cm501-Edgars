@@ -26,7 +26,8 @@ Worksheets and lab files from the sessions, one folder per session.
 | Folder | Contents |
 |---|---|
 | `session-02/` | Detective sheets: gov.uk and Campus Café (before/after) |
-| `session-03/` | Lab D `events-semantic.html`, Session 3 labs worksheet, Git escape room (PDF + PNG) |
+| `session-03/` | Lab D `events-semantic.html`, Session 3 labs worksheet, Git escape room (PDF + PNG), screen reader homework notes |
+| `session-04/` | Lab F repaired form `workshop-booking.html`, Lab F2 error state `workshop-booking-error.html` |
 
 ## Author
 
