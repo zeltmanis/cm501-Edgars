@@ -48,7 +48,10 @@ Status codes seen: `200` home page · `301` redirects above · `404` for https:/
 
 Requests by type: 1 HTML · 2 CSS · 5 JS · 4 PNG · 2 fonts (woff2) · 3 SVG (incl. favicon)
 
-_Your explanation:_ TODO, what the numbers say and what changes on Slow 4G.
+**Explanation:** 207 kB transferred but 829 kB of resources means the files are compressed on the way,
+about 4× smaller. On Slow 4G the same 207 kB takes 3.49 s instead of 96 ms: on a slow connection the
+speed depends on the network, not on how small the page is. A small page still helps, because people
+on slow mobile networks wait for every kilobyte.
 
 ## 4. Third parties
 
