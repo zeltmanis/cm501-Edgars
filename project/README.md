@@ -38,6 +38,6 @@ Fill in **where** each feature is used (file and element or line). Must items (M
 | O7 | `<iframe>` with `title` (map, video), privacy considered | |
 | O8 | `lang` on a passage in another language (e.g. `<span lang="de">`) | |
 
-**Tests:** validator: 2026-11-15, 0 errors on all 4 pages · axe (via Lighthouse 12.8.2 accessibility): 100 on all 4 pages, 0 violations · keyboard (2026-11-15, live site): every link, field and the button reachable with Tab; the topic radio group is one Tab stop and the options change with the arrow keys · screen reader: TODO
+**Tests:** validator: 2026-11-15, 0 errors on all 4 pages · axe (via Lighthouse 12.8.2 accessibility): 100 on all 4 pages, 0 violations · keyboard (2026-11-15, live site): every link, field and the button reachable with Tab; the topic radio group is one Tab stop and the options change with the arrow keys; focus outline visible at every stop; CV download works · screen reader: TODO
 
 **AI use:** Claude (AI) suggested the texts and markup step by step and explained why; I typed the home page and the contact form, and Claude created the studies, AI project and contact page skeletons from the template, fixed my slips and ran the validator and Lighthouse.
