@@ -7,11 +7,10 @@ body { margin: 0; background: #fff; font-family: 'Raleway', 'Helvetica Neue', Ar
 .logo { font-family: 'Lobster', 'Brush Script MT', cursive; font-size: 44px; color: #f3e6d8; position: absolute; left: 20px; top: 16px; }
 .nav { position: absolute; right: 10px; top: 34px; }
 .h { font-family: 'Lobster', 'Brush Script MT', cursive; color: #6b4a36; font-size: 30px; margin: 22px 0 6px; font-weight: normal; }
-.btn2 { display: inline-block; border: 1px dotted #ccc; color: #999; padding: 6px 18px; font-family: Georgia, serif; text-transform: uppercase; cursor: pointer; }
+.btn2 { display: inline-block; border: 2px solid #3b2a20; color: #3b2a20; padding: 6px 18px; font-family: Georgia, serif; text-transform: uppercase; cursor: pointer; }
 .foot { position: relative; background: #3b2a20; color: #f3e6d8; padding: 20px; margin-top: 40px; font-size: 14px; }
 .foot svg { width: 14px; height: 14px; fill: #f3e6d8; margin-right: 8px; }
-input, textarea { border: 1px solid #eee; padding: 6px; width: 300px; color: #bbb; font-family: inherit; }
-::placeholder { color: #ddd; }
+input, textarea { border: 1px solid #767676; padding: 6px; width: 300px; color: #333; font-family: inherit; font-size: inherit; }
 .nav ul { list-style: none; margin: 0; padding: 0; }
 .nav li { display: inline-block; }
 .nav a { display: inline-block; margin-left: 4px; padding: 2px 4px; font-size: 14px; color: #f3e6d8; background: #3b2a20; text-transform: uppercase; text-decoration: none; }
@@ -28,3 +27,5 @@ h2.h { font-size: 24px; }
 .desc { margin: 0; font-style: italic; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .foot svg rect { stroke: #f3e6d8; }
+label { display: block; font-weight: 600; }
+.foot a { color: #f3e6d8; }

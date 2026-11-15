@@ -1,39 +1,59 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact · Campus Café</title>
 <link rel="stylesheet" href="before.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <!-- EPA 2 starter kit (CM-501). Built badly ON PURPOSE. Repair it: see epa2-assessment-brief. -->
 <div id="wrap">
-  <div class="top">
+  <header class="top">
     <div class="logo">Campus Café</div>
-    <div class="nav">
-      <div onclick="location.href='menu.html'">MENU</div>
-      <div onclick="location.href='contact.html'">CONTACT</div>
-    </div>
-  </div>
+    <nav class="nav" aria-label="Main">
+      <ul>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main">
   <h1 class="h">Contact</h1>
-  <img src="img/contact.png">
-  <div>Example Street 1, 80000 Munich</div>
-  <br>
-  <iframe src="https://maps.google.com/maps?q=Munich&z=12&output=embed" width="1100" height="320" style="border:0"></iframe>
+  <address>
+    Example Street 1, 80000 Munich<br>
+    Phone: <a href="tel:+498900000000">+49 89 000 000 00</a><br>
+    E-mail: <a href="mailto:hello@campus-cafe.example">hello@campus-cafe.example</a>
+  </address>
+  <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Example+Street+1+Munich">Show the café on Google Maps</a> (opens Google Maps)</p>
 
-  <div class="h" style="font-size:24px">Newsletter &amp; reservations</div>
-  <form action="https://campus-cafe.example/subscribe" method="get">
-    <input type="text" name="name" placeholder="Name"><br><br>
-    <input type="text" name="email" placeholder="E-Mail"><br><br>
-    <input type="text" name="birthday" placeholder="Birthday"><br><br>
-    <input type="text" name="phone" placeholder="Phone"><br><br>
-    <textarea name="msg" placeholder="Message"></textarea><br><br>
-    <div class="btn2" onclick="this.closest('form').submit()">Send</div>
+  <h2 class="h">Newsletter &amp; reservations</h2>
+  <form action="https://campus-cafe.example/subscribe" method="post">
+    <p>
+      <label for="name">Name (required)</label>
+      <input type="text" id="name" name="name" autocomplete="name" required>
+    </p>
+    <p>
+      <label for="email">E-mail (required)</label>
+      <input type="email" id="email" name="email" autocomplete="email" required>
+    </p>
+    <p>
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" autocomplete="tel">
+    </p>
+    <p>
+      <label for="msg">Message</label>
+      <textarea id="msg" name="msg"></textarea>
+    </p>
+    <button type="submit" class="btn2">Send</button>
   </form>
-  <div class="foot">
-    <a href="#"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-2.8 0-4 1.7-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8.5c0-.4.2-.5.5-.5z"/></svg></a>
-    <a href="#"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="#6b4a36" stroke-width="2"/></svg></a>
-    <br><br>© Campus Café
-  </div>
+  </main>
+  <footer class="foot">
+    <a href="https://www.facebook.com/"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 8h3V4h-3c-2.8 0-4 1.7-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8.5c0-.4.2-.5.5-.5z"/></svg><span class="visually-hidden">Campus Café on Facebook</span></a>
+    <a href="https://www.instagram.com/"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="#6b4a36" stroke-width="2"/></svg><span class="visually-hidden">Campus Café on Instagram</span></a>
+    <p>© Campus Café</p>
+  </footer>
 </div>
 </body>
 </html>
