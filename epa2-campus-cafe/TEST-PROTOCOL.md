@@ -49,17 +49,17 @@ Target: WCAG 2.2 AA. The fixed 1100 px layout stays (responsive layout is EPA 3)
 Screenshots for menu.html: `screenshots/`. Before = unchanged starter; after = live GitHub Pages version.
 Lighthouse failures on contact.html before: color-contrast, frame-title, html-has-lang, image-alt, link-name.
 
-contact.html after: WAVE web version (wave.webaim.org) on the live page, 2026-11-15, after footer links got the light footer colour (`.foot a`). In the same session, the WAVE browser extension still reported 2 contrast errors that were not visible on the page. I could not identify them, so the result depends on which WAVE variant is used.
+contact.html after: WAVE (web version and browser extension) on the live page, 2026-11-15. The first extension run still showed 2 contrast errors that were not visible on the page. They were most likely the visually hidden footer link names (browser-blue text on the dark footer). After footer links got the light footer colour (`.foot a`) and the page was hard-reloaded, both WAVE variants showed 0 / 0 / 0.
 
 ## C3 · Manual tests
 
 **Keyboard (menu.html):** Tab order is skip link → Menu → Contact → Facebook → Instagram. The focus outline is visible on every stop, and Enter opens the links. The menu content is not in the Tab order. That is correct, because it is not interactive.
 
-**Keyboard (contact.html):** TODO: Tab through the page: skip link, nav, phone, e-mail, map link, four fields, Send button, social links. Is the focus visible everywhere, and does Enter on Send submit the form?
+**Keyboard (contact.html):** Tab order is skip link → Menu → Contact → phone → e-mail → map link → Name → E-mail → Phone → Message → Send → Facebook → Instagram. The focus outline is visible at every stop (2026-11-15).
 
 **Screen reader:** VoiceOver (macOS) with Safari on menu.html, 2026-11-15. The rotor lists headings (Menu, Today's special, Coffee, Tea & more, Food), landmarks (banner, navigation "Main", main, footer) and links with meaningful names. In Chrome the rotor did not list the headings, so VoiceOver has to be tested in Safari.
 
-**Zoom 200 %:** TODO: both pages at 200 % (Cmd +): is any text cut off or overlapping? Horizontal scrolling is expected because of the fixed 1100 px layout (EPA 3).
+**Zoom 200 %:** contact.html in Chrome at 200 %. All text stays readable and nothing overlaps. Because of the fixed 1100 px layout the nav is cut off on the right and needs horizontal scrolling (allowed for EPA 2, responsive layout is EPA 3).
 
 ## C4 · Peer test
 
@@ -71,4 +71,4 @@ Automated tools only check what can be measured in the code, not whether the res
 
 ## Use of AI
 
-TODO (check this is accurate): I used Claude (AI) to explain WCAG criteria, review my changes and fix copy-paste mistakes, run the validator and Lighthouse, and draft this protocol from my notes. I typed most changes myself. Claude corrected slips such as duplicate lines and pastes into the wrong file, and finished two CSS lines. I can explain every change.
+I used Claude (AI) to explain WCAG criteria, review my changes, run the validator and Lighthouse, and draft this protocol from my notes. I typed most changes myself. Claude applied some directly: it copied the header and footer from my menu.html into contact.html, removed duplicate lines left after my pastes, and finished two CSS lines. I can explain every change.
