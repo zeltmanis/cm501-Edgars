@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- HTML baseline starter · CM-501 Session 4, Lab G
+     Copy this folder into your project repository. Replace every TODO.
+     Checklist: README.md (section "HTML baseline"). -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- M1: unique title per page, pattern "Page · Site" -->
+  <title>Home · Edgars Zeltmanis</title>
+  <!-- M1: one or two sentences that would make someone click in a search result -->
+  <meta name="description" content="Edgars Zeltmanis: software engineering student at MUDT and builder of Aura, a self-hosted AI assistant.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <!-- The only CSS before EPA 3: touch targets of at least 24 × 24 px (WCAG 2.2, 2.5.8),
+       because unstyled links in a vertical list are too small and too close together. -->
+  <style>nav a, summary { display: inline-block; min-height: 24px; padding-block: 4px; }</style>
+  <!-- Otherwise no CSS yet on purpose: layout and design come in EPA 3 (Sessions 5 and 6). -->
+</head>
+<body>
+  <!-- M2: skip link = first focusable element -->
+  <a href="#main">Skip to main content</a>
+
+  <header>
+    <!-- the site name links to the home page -->
+    <p><a href="index.html">Edgars Zeltmanis</a></p>
+
+    <!-- M3: the same navigation on every page; aria-current on the current page -->
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="studies.html">Studies</a></li>
+        <li><a href="ai-project.html">AI Project</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- M4: exactly one h1, then h2, h3 … without gaps -->
+    <h1>Software engineering student building self-hosted AI</h1>
+    <p>I'm Edgars, a software engineering student at MUDT in Munich. Besides my studies I build Aura, an AI assistant that runs on my own hardware instead of in someone else's cloud.</p>
+
+    <section aria-labelledby="news-heading">
+      <h2 id="news-heading">What I'm working on</h2>
+      <ul>
+        <li>
+          <article>
+            <h3>Aura: running for over three months</h3>
+            <p><time datetime="2026-11">November 2026</time></p>
+            <p>Aura, my self-hosted AI assistant, has been running successfully for more than three months. <a href="ai-project.html">Read more about Aura</a> or see the full project on <a href="https://zeltmanis.com">zeltmanis.com</a>.</p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h3>Third semester at MUDT</h3>
+            <p><time datetime="2026-10">October 2026</time></p>
+            <p>Software engineering, frontend development and robotics this winter semester. <a href="studies.html">See what I'm studying</a></p>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <!-- M5: alt says what the image MEANS here (or alt="" if purely decorative);
+         width/height = the real pixel size of the file -->
+    <figure>
+      <img src="img/edgars-caricature.jpg" alt="Caricature of me holding a laptop and an 'AI Fuel' coffee mug, surrounded by a robot, a podcast microphone, sports cars and books on machine learning, AI and cars" width="600" height="900" loading="lazy">
+      <figcaption>My interests in one picture: AI, podcasts and cars.</figcaption>
+    </figure>
+  </main>
+
+  <footer>
+    <!-- M7: contact data as text and real links -->
+    <address>
+      Edgars Zeltmanis<br>
+      Munich, Germany<br>
+      <a href="mailto:edgars@zeltmanis.com">edgars@zeltmanis.com</a>
+    </address>
+    <p><small>© 2026 Edgars Zeltmanis</small></p>
+  </footer>
+</body>
+</html>

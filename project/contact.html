@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact · Edgars Zeltmanis</title>
+  <meta name="description" content="How to reach Edgars Zeltmanis: contact form, CV and links.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <!-- The only CSS before EPA 3: touch targets of at least 24 × 24 px (WCAG 2.2, 2.5.8),
+       because unstyled links in a vertical list are too small and too close together. -->
+  <style>nav a, summary { display: inline-block; min-height: 24px; padding-block: 4px; }</style>
+</head>
+<body>
+  <a href="#main">Skip to main content</a>
+
+  <header>
+    <p><a href="index.html">Edgars Zeltmanis</a></p>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="studies.html">Studies</a></li>
+        <li><a href="ai-project.html">AI Project</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1>Contact</h1>
+    <p>Want to work together on AI or research, or have a question about my projects? Write me a message, or find me on <a href="https://zeltmanis.com">zeltmanis.com</a> and <a href="https://starit.lv">starit.lv</a>.</p>
+    <p><a href="files/Edgars_Zeltmanis_CV.pdf" download>Download my CV (PDF, 106 KB)</a></p>
+
+    <form action="#" method="post">
+      <p>
+        <label for="name">Name (required)</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+      </p>
+      <p>
+        <label for="email">E-mail (required)</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+      </p>
+      <fieldset>
+        <legend>What is it about?</legend>
+        <p><input type="radio" id="topic-collab" name="topic" value="collaboration"> <label for="topic-collab">Collaboration</label></p>
+        <p><input type="radio" id="topic-studies" name="topic" value="studies"> <label for="topic-studies">Studies</label></p>
+        <p><input type="radio" id="topic-other" name="topic" value="other"> <label for="topic-other">Something else</label></p>
+      </fieldset>
+      <p>
+        <label for="message">Message (required)</label>
+        <textarea id="message" name="message" required></textarea>
+      </p>
+      <button type="submit">Send message</button>
+    </form>
+  </main>
+
+  <footer>
+    <address>
+      Edgars Zeltmanis · Munich, Germany · <a href="mailto:edgars@zeltmanis.com">edgars@zeltmanis.com</a>
+    </address>
+  </footer>
+</body>
+</html>
