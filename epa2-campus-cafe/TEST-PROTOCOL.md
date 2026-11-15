@@ -43,13 +43,13 @@ Target: WCAG 2.2 AA. The fixed 1100 px layout stays (responsive layout is EPA 3)
 |---|---|---|---|---|
 | W3C HTML validator (errors) | 14 | 0 | 2 | 0 |
 | Lighthouse accessibility | 46 | 100 | 48 | 100 |
-| WAVE errors / contrast errors / alerts | 5 / 38 / 5 | 0 / 0 / 0 | 9 / 8 / 4 | 0 / 2 / 0 |
-| WAVE AIM score | 3.6 | 9.1 | 5.4 | 8.5 |
+| WAVE errors / contrast errors / alerts | 5 / 38 / 5 | 0 / 0 / 0 | 9 / 8 / 4 | 0 / 0 / 0 |
+| WAVE AIM score | 3.6 | 9.1 | 5.4 | 10 |
 
 Screenshots for menu.html: `screenshots/`. Before = unchanged starter; after = live GitHub Pages version.
 Lighthouse failures on contact.html before: color-contrast, frame-title, html-has-lang, image-alt, link-name.
 
-TODO: name the 2 remaining WAVE contrast errors on contact.html and fix or explain them.
+contact.html after: WAVE web version (wave.webaim.org) on the live page, 2026-11-15, after footer links got the light footer colour (`.foot a`). In the same session, the WAVE browser extension still reported 2 contrast errors that were not visible on the page. I could not identify them, so the result depends on which WAVE variant is used.
 
 ## C3 · Manual tests
 
