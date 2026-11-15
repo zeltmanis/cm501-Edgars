@@ -71,4 +71,4 @@ Automated tools only check what can be measured in the code, not whether the res
 
 ## Use of AI
 
-TODO (check this is accurate): I used Claude (AI) to explain WCAG criteria, review my changes and fix copy-paste mistakes, run the validator and Lighthouse, and draft this protocol from my notes. I typed most changes myself. Claude corrected slips such as duplicate lines and pastes into the wrong file, and finished two CSS lines. I can explain every change.
+I used Claude (AI) to explain WCAG criteria, review my changes, run the validator and Lighthouse, and draft this protocol from my notes. I typed most changes myself. Claude applied some directly: it copied the header and footer from my menu.html into contact.html, removed duplicate lines left after my pastes, and finished two CSS lines. I can explain every change.
