@@ -1,19 +1,25 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact · Campus Café</title>
 <link rel="stylesheet" href="before.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <!-- EPA 2 starter kit (CM-501). Built badly ON PURPOSE. Repair it: see epa2-assessment-brief. -->
 <div id="wrap">
-  <div class="top">
+  <header class="top">
     <div class="logo">Campus Café</div>
-    <div class="nav">
-      <div onclick="location.href='menu.html'">MENU</div>
-      <div onclick="location.href='contact.html'">CONTACT</div>
-    </div>
-  </div>
+    <nav class="nav" aria-label="Main">
+      <ul>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main">
   <h1 class="h">Contact</h1>
   <img src="img/contact.png">
   <div>Example Street 1, 80000 Munich</div>
