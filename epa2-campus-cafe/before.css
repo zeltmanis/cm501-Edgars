@@ -28,3 +28,4 @@ h2.h { font-size: 24px; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .foot svg rect { stroke: #f3e6d8; }
 label { display: block; font-weight: 600; }
+.foot a { color: #f3e6d8; }
