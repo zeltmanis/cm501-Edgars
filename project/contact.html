@@ -27,16 +27,29 @@
 
   <main id="main">
     <h1>Contact</h1>
-    <p>TODO</p>
+    <p>Want to work together on AI or research, or have a question about my projects? Write me a message, or find me on <a href="https://zeltmanis.com">zeltmanis.com</a> and <a href="https://starit.lv">starit.lv</a>.</p>
 
-    <!-- M9: if this is your form page: see the form block in the Session 4 cheat sheet
     <form action="#" method="post">
-      <label for="name">Name (required)</label>
-      <input id="name" name="name" type="text" autocomplete="name" required>
-      …
-      <button type="submit">TODO: say what happens, e.g. Send request</button>
+      <p>
+        <label for="name">Name (required)</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+      </p>
+      <p>
+        <label for="email">E-mail (required)</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+      </p>
+      <fieldset>
+        <legend>What is it about?</legend>
+        <p><input type="radio" id="topic-collab" name="topic" value="collaboration"> <label for="topic-collab">Collaboration</label></p>
+        <p><input type="radio" id="topic-studies" name="topic" value="studies"> <label for="topic-studies">Studies</label></p>
+        <p><input type="radio" id="topic-other" name="topic" value="other"> <label for="topic-other">Something else</label></p>
+      </fieldset>
+      <p>
+        <label for="message">Message (required)</label>
+        <textarea id="message" name="message" required></textarea>
+      </p>
+      <button type="submit">Send message</button>
     </form>
-    -->
   </main>
 
   <footer>
