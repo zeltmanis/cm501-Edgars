@@ -28,14 +28,25 @@
   </address>
   <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Example+Street+1+Munich">Show the café on Google Maps</a> (opens Google Maps)</p>
 
-  <div class="h" style="font-size:24px">Newsletter &amp; reservations</div>
-  <form action="https://campus-cafe.example/subscribe" method="get">
-    <input type="text" name="name" placeholder="Name"><br><br>
-    <input type="text" name="email" placeholder="E-Mail"><br><br>
-    <input type="text" name="birthday" placeholder="Birthday"><br><br>
-    <input type="text" name="phone" placeholder="Phone"><br><br>
-    <textarea name="msg" placeholder="Message"></textarea><br><br>
-    <div class="btn2" onclick="this.closest('form').submit()">Send</div>
+  <h2 class="h">Newsletter &amp; reservations</h2>
+  <form action="https://campus-cafe.example/subscribe" method="post">
+    <p>
+      <label for="name">Name (required)</label>
+      <input type="text" id="name" name="name" autocomplete="name" required>
+    </p>
+    <p>
+      <label for="email">E-mail (required)</label>
+      <input type="email" id="email" name="email" autocomplete="email" required>
+    </p>
+    <p>
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" autocomplete="tel">
+    </p>
+    <p>
+      <label for="msg">Message</label>
+      <textarea id="msg" name="msg"></textarea>
+    </p>
+    <button type="submit" class="btn2">Send</button>
   </form>
   <div class="foot">
     <a href="#"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-2.8 0-4 1.7-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8.5c0-.4.2-.5.5-.5z"/></svg></a>
