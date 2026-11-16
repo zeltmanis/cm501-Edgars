@@ -63,7 +63,13 @@ contact.html after: WAVE (web version and browser extension) on the live page, 2
 
 ## C4 · Peer test
 
-TODO: who tested, what they found, what I changed afterwards.
+**Tester:** Malsor (classmate), 15.11.2026, on the live pages with Narrator (Windows). Filled-in course peer test sheet: `peer-test/peer-test-protocol-malsor.pdf`.
+
+**Tested:** keyboard (skip link, Tab reach, visible focus, order), screen reader (headings, landmarks, link names, images, form labels and "required"), zoom 200 %, WAVE and the W3C validator on both pages.
+
+**Found:** all checks passed. WAVE showed 0 errors and 0 contrast errors and the validator showed 0 errors on both pages. Narrator read the form labels and "required", and today's special was read as text. One minor finding on both pages: at 200 % zoom the page is wider than the window, so you have to scroll sideways (1.4.10 Reflow, severity M).
+
+**Changed afterwards:** nothing. The sideways scrolling comes from the fixed 1100 px layout, which the brief allows for EPA 2. Responsive layout is EPA 3, so I will fix 1.4.10 there. I had already noted the same thing in C3. Narrator on Windows also confirmed the VoiceOver result from C3 with a second screen reader.
 
 ## C5 · Limits of automated tools
 
