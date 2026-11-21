@@ -28,3 +28,54 @@
   --radius-pill: 999px;
   --radius-card: 1.5rem;
 }
+
+/* Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--gradient-page) fixed;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: var(--font-size-h1); }
+h2 { font-size: var(--font-size-h2); }
+h3 { font-size: var(--font-size-h3); }
+
+p { max-width: 65ch; }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a { color: var(--color-text); text-underline-offset: 0.2em; }
+a:hover { color: var(--color-text-muted); }
+
+:focus-visible {
+  outline: 3px solid var(--color-brand);
+  outline-offset: 3px;
+}
+
+/* Touch targets of at least 24 × 24 px (WCAG 2.5.8) */
+nav a,
+summary {
+  display: inline-block;
+  min-height: 24px;
+  padding-block: var(--space-1);
+}
