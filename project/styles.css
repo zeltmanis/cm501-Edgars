@@ -1,0 +1,11 @@
+/* Design tokens: the only place colours are defined */
+:root {
+  --color-bg: #eef1f3;
+  --color-surface: rgb(255 255 255 / 0.75);
+  --color-text: #111215;
+  --color-text-muted: #5d646e;
+  --color-brand: #111215;
+  --color-on-brand: #ffffff;
+  --color-success: #1e7d46;
+  --color-line: #dde3e8;
+}
