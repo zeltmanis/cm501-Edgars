@@ -203,7 +203,7 @@ body > footer {
 
 /* Breakpoint 2, desktop (64rem = 1024px): text left, picture right */
 @media (min-width: 64rem) {
-  main {
+  main:has(> figure) {
     display: grid;
     grid-template-columns: 1fr 20rem;
     grid-template-rows: auto auto 1fr;
@@ -211,7 +211,7 @@ body > footer {
     align-items: start;
   }
 
-  main > * {
+  main:has(> figure) > * {
     grid-column: 1;
   }
 
