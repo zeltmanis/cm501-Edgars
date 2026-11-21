@@ -27,6 +27,8 @@
 
   --radius-pill: 999px;
   --radius-card: 1.5rem;
+  --shadow-card: 0 0.75rem 2rem rgb(30 40 50 / 0.08);
+  --color-glass-edge: rgb(255 255 255 / 0.9);
 }
 
 /* Base */
@@ -147,4 +149,73 @@ nav a {
 nav a[aria-current="page"] {
   background: var(--color-brand);
   color: var(--color-on-brand);
+}
+
+/* Cards: the news articles and the picture */
+main section ul {
+  display: grid;
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+main article,
+main figure {
+  margin: 0;
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-glass-edge);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(12px);
+}
+
+main li:first-child article {
+  background: var(--gradient-shimmer);
+}
+
+main article h3 {
+  margin-top: 0;
+}
+
+time {
+  color: var(--color-text-muted);
+}
+
+figcaption {
+  margin-top: var(--space-2);
+  color: var(--color-text-muted);
+}
+
+body > footer {
+  padding-block: var(--space-5);
+  color: var(--color-text-muted);
+  border-top: 1px solid var(--color-line);
+}
+
+/* Breakpoint 1, tablet (40rem = 640px): two cards side by side */
+@media (min-width: 40rem) {
+  main section ul {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Breakpoint 2, desktop (64rem = 1024px): text left, picture right */
+@media (min-width: 64rem) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 20rem;
+    column-gap: var(--space-6);
+    align-items: start;
+  }
+
+  main > * {
+    grid-column: 1;
+  }
+
+  main > figure {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+  }
 }
