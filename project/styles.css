@@ -1,4 +1,4 @@
-/* Design tokens: the only place colours are defined */
+/* Design tokens: the only place colours, sizes and spacings are defined */
 :root {
   --color-bg: #eef1f3;
   --color-surface: rgb(255 255 255 / 0.75);
@@ -8,4 +8,23 @@
   --color-on-brand: #ffffff;
   --color-success: #1e7d46;
   --color-line: #dde3e8;
+
+  --gradient-page: linear-gradient(180deg, #e3eaef 0%, #f4f6f7 45%, #eef1f3 100%);
+  --gradient-shimmer: linear-gradient(120deg, #f9c6d3 0%, #f7d9a8 45%, #c9b8f0 100%);
+
+  --font-body: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-size-body: 1rem;
+  --font-size-h3: 1.25rem;
+  --font-size-h2: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
+  --font-size-h1: clamp(2.25rem, 1.5rem + 4vw, 3.5rem);
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+
+  --radius-pill: 999px;
+  --radius-card: 1.5rem;
 }
