@@ -206,6 +206,7 @@ body > footer {
   main {
     display: grid;
     grid-template-columns: 1fr 20rem;
+    grid-template-rows: auto auto 1fr;
     column-gap: var(--space-6);
     align-items: start;
   }
