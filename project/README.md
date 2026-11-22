@@ -41,3 +41,9 @@ Fill in **where** each feature is used (file and element or line). Must items (M
 **Tests:** validator: 2026-11-15, 0 errors on all 4 pages · axe (via Lighthouse 12.8.2 accessibility): 100 on all 4 pages, 0 violations · keyboard (2026-11-15, live site): every link, field and the button reachable with Tab; the topic radio group is one Tab stop and the options change with the arrow keys; focus outline visible at every stop; CV download works · screen reader: TODO
 
 **AI use:** Claude (AI) suggested the texts and markup step by step and explained why; I typed the home page and the contact form, and Claude created the studies, AI project and contact page skeletons from the template, fixed my slips and ran the validator and Lighthouse.
+
+## Design
+
+The website is designed for recruiters, lecturers and people interested in my work on Aura. I wanted it to feel calm, precise and trustworthy, while combining a warm personal touch with a technical look. I chose a light, misty background, frosted-glass cards and black pill-shaped elements, with the shimmer card as the only colourful accent. The layout uses a system font for faster loading, and all design values are defined as CSS tokens in `:root`. I followed a mobile-first approach, using two breakpoints at 40rem and 64rem, with a two-column layout for pages that include an image.
+
+I tested the website at 320, 768, 1280 and 1920px widths, as well as at 400% zoom. I checked colour contrast for every colour combination, validated the HTML with the W3C validator and tested keyboard navigation, including the skip link and visible focus outlines. AI (Claude) helped me understand CSS concepts, calculate contrast ratios, create colour previews and review and correct my code, but I made the design decisions and typed the CSS myself.
