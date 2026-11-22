@@ -306,3 +306,9 @@ button:disabled {
   background: var(--color-line);
   cursor: not-allowed;
 }
+
+/* Keep the picture a sensible size on tablets */
+main > figure {
+  max-width: 24rem;
+  margin-top: var(--space-5);
+}
