@@ -32,6 +32,10 @@
   --color-brand-hover: #33363c;
   --color-field-border: #7b828c;
   --radius-field: 0.75rem;
+  --border-thin: 1px;
+  --focus-ring: 3px;
+  --blur-glass: 12px;
+  --target-min: 24px;
 }
 
 /* Base */
@@ -73,15 +77,15 @@ a { color: var(--color-text); text-underline-offset: 0.2em; }
 a:hover { color: var(--color-text-muted); }
 
 :focus-visible {
-  outline: 3px solid var(--color-brand);
-  outline-offset: 3px;
+  outline: var(--focus-ring) solid var(--color-brand);
+  outline-offset: var(--focus-ring);
 }
 
 /* Touch targets of at least 24 × 24 px (WCAG 2.5.8) */
 nav a,
 summary {
   display: inline-block;
-  min-height: 24px;
+  min-height: var(--target-min);
   padding-block: var(--space-1);
 }
 
@@ -168,10 +172,10 @@ main figure {
   margin: 0;
   padding: var(--space-4);
   background: var(--color-surface);
-  border: 1px solid var(--color-glass-edge);
+  border: var(--border-thin) solid var(--color-glass-edge);
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-card);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(var(--blur-glass));
 }
 
 main li:first-child article {
@@ -194,7 +198,7 @@ figcaption {
 body > footer {
   padding-block: var(--space-5);
   color: var(--color-text-muted);
-  border-top: 1px solid var(--color-line);
+  border-top: var(--border-thin) solid var(--color-line);
 }
 
 /* Breakpoint 1, tablet (40rem = 640px): two cards side by side */
@@ -243,7 +247,7 @@ textarea {
   padding: var(--space-2) var(--space-3);
   color: var(--color-text);
   background: var(--color-surface);
-  border: 1px solid var(--color-field-border);
+  border: var(--border-thin) solid var(--color-field-border);
   border-radius: var(--radius-field);
 }
 
@@ -260,7 +264,7 @@ textarea {
 fieldset {
   margin: 0;
   padding: var(--space-3) var(--space-4);
-  border: 1px solid var(--color-field-border);
+  border: var(--border-thin) solid var(--color-field-border);
   border-radius: var(--radius-card);
 }
 
