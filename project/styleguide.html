@@ -74,7 +74,7 @@
 
     <section aria-labelledby="colours">
       <h2 id="colours">Colours</h2>
-      <p>Tokens are named by role, not by colour. Contrast measured with the WCAG formula (checked in the DevTools colour picker): text needs 4.5 : 1, large text and UI parts 3 : 1.</p>
+      <p>Tokens are named by role, not by colour. Contrast measured with the WCAG formula (checked in the DevTools colour picker): text needs 4.5 : 1, large text and UI parts 3 : 1. Values below are for light mode; the dark values are under <a href="#dark">Dark mode</a>.</p>
       <ul class="swatches">
         <li class="swatch"><div style="background: var(--color-text)"></div>
           <p><code>--color-text</code><br>#111215 · body text<br>16.5 : 1 on bg, 18.2 : 1 on surface</p></li>
@@ -135,7 +135,7 @@
         <button type="button" class="is-focus" tabindex="-1">Focus</button>
         <button type="button" disabled>Disabled</button>
       </div>
-      <p>Hover: lighter black. Focus: 3px black outline with a gap (<code>:focus-visible</code>, only for keyboard). Disabled: grey with muted text (4.6 : 1) and a not-allowed cursor.</p>
+      <p>In dark mode the pill turns light and everything below inverts with it. Hover: lighter black. Focus: 3px black outline with a gap (<code>:focus-visible</code>, only for keyboard). Disabled: grey with muted text (4.6 : 1) and a not-allowed cursor.</p>
 
       <h3>Card</h3>
       <article>
@@ -179,6 +179,29 @@
         </fieldset>
       </form>
       <p>Label above the field, field edge 3.4 : 1 (WCAG 1.4.11), darker edge on hover, same focus ring as the button, radios in the brand colour.</p>
+    </section>
+
+    <section aria-labelledby="dark">
+      <h2 id="dark">Dark mode</h2>
+      <p>Follows the system setting (<code>prefers-color-scheme: dark</code>). Only the colour tokens change, so every component switches by itself. Misty night blue instead of pure black, light pills instead of black ones, and a darker shimmer so light text stays readable. Switch your system to dark (or DevTools → Rendering → Emulate prefers-color-scheme) to see this page in dark mode.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th scope="col">Token</th><th scope="col">Light</th><th scope="col">Dark</th><th scope="col">Pair</th><th scope="col">Light ratio</th><th scope="col">Dark ratio</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>--color-text</code></td><td>#111215</td><td>#e6eaee</td><td>text / background</td><td>16.5 : 1</td><td>14.6 : 1</td></tr>
+            <tr><td><code>--color-text-muted</code></td><td>#5d646e</td><td>#a2abb6</td><td>muted / background</td><td>5.3 : 1</td><td>7.6 : 1</td></tr>
+            <tr><td><code>--color-bg</code></td><td>#eef1f3</td><td>#15191e</td><td>text / surface</td><td>18.2 : 1</td><td>12.6 : 1</td></tr>
+            <tr><td><code>--color-brand</code></td><td>#111215</td><td>#e6eaee</td><td>button text / button</td><td>18.7 : 1</td><td>14.6 : 1</td></tr>
+            <tr><td><code>--color-brand-hover</code></td><td>#33363c</td><td>#c3cbd3</td><td>button text / hover</td><td>12.1 : 1</td><td>10.8 : 1</td></tr>
+            <tr><td><code>--color-brand</code></td><td>#111215</td><td>#e6eaee</td><td>focus outline / background</td><td>16.5 : 1</td><td>14.6 : 1</td></tr>
+            <tr><td><code>--color-field-border</code></td><td>#7b828c</td><td>#77818c</td><td>field edge / background (needs 3 : 1)</td><td>3.4 : 1</td><td>4.5 : 1</td></tr>
+            <tr><td><code>--gradient-shimmer</code></td><td>pastel</td><td>dark rose → brown → violet</td><td>text / darkest stop</td><td>10.3 : 1</td><td>7.4 : 1</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The focus ring uses <code>--color-brand</code>, so it turns light in dark mode and stays visible in both. <code>color-scheme: light dark</code> makes the browser's own form controls and scrollbars follow too.</p>
     </section>
 
     <section aria-labelledby="breakpoints">
