@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Style guide · Edgars Zeltmanis</title>
+  <meta name="description" content="The design system of Edgars Zeltmanis' personal site: colour tokens with contrast, type scale, spacing, components and breakpoints.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <!-- the real site stylesheet: every token and component below comes from it -->
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Helpers for this page only (swatches, spacing bars, forced states) */
+    .swatches {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+      gap: var(--space-3);
+      padding: 0;
+      list-style: none;
+    }
+    .swatch {
+      overflow: hidden;
+      background: var(--color-surface);
+      border: var(--border-thin) solid var(--color-field-border);
+      border-radius: var(--radius-field);
+    }
+    .swatch div { height: 4rem; }
+    .swatch p { margin: 0; padding: var(--space-2) var(--space-3); }
+    .spaces div {
+      height: 1rem;
+      margin-block: var(--space-2) 0;
+      background: var(--color-brand);
+    }
+    .spaces p { margin: 0; color: var(--color-text-muted); }
+    .states {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--space-3);
+    }
+    /* static copies of hover and focus, so both states are visible without a mouse or Tab */
+    .states .is-hover { background: var(--color-brand-hover); }
+    .states .is-focus { outline: var(--focus-ring) solid var(--color-brand); outline-offset: var(--focus-ring); }
+    input.field-hover { border-color: var(--color-text); }
+    /* the card-grid rule for lists in main sections would split the pills into two columns */
+    .nav-demo { display: flex; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td {
+      padding: var(--space-2);
+      text-align: left;
+      border-bottom: var(--border-thin) solid var(--color-line);
+    }
+    .table-wrap { overflow-x: auto; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header>
+    <p><a href="index.html">Edgars Zeltmanis</a></p>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="studies.html">Studies</a></li>
+        <li><a href="ai-project.html">AI Project</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1>Style guide: Mist</h1>
+    <p>For recruiters, lecturers and classmates who want to know what I study and build: the site should feel calm, light and modern, like morning mist, with frosted-glass cards and one colourful highlight.</p>
+    <p>All values live once in <code>:root</code> of <a href="styles.css"><code>styles.css</code></a>. This page links the same file, so what you see here is what the site uses.</p>
+
+    <section aria-labelledby="colours">
+      <h2 id="colours">Colours</h2>
+      <p>Tokens are named by role, not by colour. Contrast measured with the WCAG formula (checked in the DevTools colour picker): text needs 4.5 : 1, large text and UI parts 3 : 1.</p>
+      <ul class="swatches">
+        <li class="swatch"><div style="background: var(--color-text)"></div>
+          <p><code>--color-text</code><br>#111215 · body text<br>16.5 : 1 on bg, 18.2 : 1 on surface</p></li>
+        <li class="swatch"><div style="background: var(--color-bg)"></div>
+          <p><code>--color-bg</code><br>#eef1f3 · page background (with <code>--gradient-page</code>)</p></li>
+        <li class="swatch"><div style="background: var(--color-surface)"></div>
+          <p><code>--color-surface</code><br>white 75 % · glass cards, fields (≈ #fbfcfc on bg)</p></li>
+        <li class="swatch"><div style="background: var(--color-brand)"></div>
+          <p><code>--color-brand</code><br>#111215 · pills, button, focus ring<br>with <code>--color-on-brand</code> (#ffffff): 18.7 : 1</p></li>
+        <li class="swatch"><div style="background: var(--color-brand-hover)"></div>
+          <p><code>--color-brand-hover</code><br>#33363c · button hover<br>with on-brand: 12.1 : 1</p></li>
+        <li class="swatch"><div style="background: var(--gradient-shimmer)"></div>
+          <p><code>--gradient-shimmer</code> (accent)<br>pink → peach → lavender · highlight card<br>text on it: at least 10.3 : 1</p></li>
+        <li class="swatch"><div style="background: var(--color-text-muted)"></div>
+          <p><code>--color-text-muted</code><br>#5d646e · dates, captions, footer<br>5.3 : 1 on bg, 5.8 : 1 on surface</p></li>
+        <li class="swatch"><div style="background: var(--color-field-border)"></div>
+          <p><code>--color-field-border</code><br>#7b828c · form field edges<br>3.4 : 1 on bg (UI part, needs 3 : 1)</p></li>
+        <li class="swatch"><div style="background: var(--color-line)"></div>
+          <p><code>--color-line</code><br>#dde3e8 · decorative lines only<br>1.1 : 1, never for text or controls</p></li>
+      </ul>
+      <p>Muted text is too light on the shimmer gradient (only 3.3 : 1 on lavender), so inside the highlight card dates use <code>--color-text</code>.</p>
+    </section>
+
+    <section aria-labelledby="type">
+      <h2 id="type">Typography</h2>
+      <p>Font: <code>system-ui</code> (San Francisco on Mac, Segoe UI on Windows). No font file to download and no request to a third party, so the page is fast and private, and every system shows a font made for its screen.</p>
+      <p style="font-size: var(--font-size-h1)">Heading 1 · <code>--font-size-h1</code></p>
+      <p>clamp(2.25rem, 1.5rem + 4vw, 3.5rem): fluid between phone and desktop</p>
+      <p style="font-size: var(--font-size-h2)">Heading 2 · <code>--font-size-h2</code></p>
+      <p>clamp(1.5rem, 1.2rem + 1.5vw, 2rem)</p>
+      <p style="font-size: var(--font-size-h3)">Heading 3 · <code>--font-size-h3</code></p>
+      <p>1.25rem</p>
+      <p>Body text · <code>--font-size-body</code> 1rem, line height 1.6, at most 65ch per line. <a href="#type">A link</a> is underlined in the text colour and turns muted on hover.</p>
+    </section>
+
+    <section aria-labelledby="space">
+      <h2 id="space">Spacing</h2>
+      <p>Only these values are used for margins, paddings and gaps.</p>
+      <div class="spaces">
+        <div style="width: var(--space-1)"></div><p><code>--space-1</code> 0.25rem</p>
+        <div style="width: var(--space-2)"></div><p><code>--space-2</code> 0.5rem</p>
+        <div style="width: var(--space-3)"></div><p><code>--space-3</code> 1rem</p>
+        <div style="width: var(--space-4)"></div><p><code>--space-4</code> 1.5rem</p>
+        <div style="width: var(--space-5)"></div><p><code>--space-5</code> 2rem</p>
+        <div style="width: var(--space-6)"></div><p><code>--space-6</code> 3rem</p>
+      </div>
+      <p>Other sizes: radius pill 999px, card 1.5rem, field 0.75rem; border 1px; focus ring 3px; glass blur 12px; touch target at least 24px (WCAG 2.5.8).</p>
+    </section>
+
+    <section aria-labelledby="components">
+      <h2 id="components">Components</h2>
+
+      <h3>Button</h3>
+      <p>Black pill. The first button is live: hover it, or press <kbd>Tab</kbd> to see the focus ring. The others show each state fixed.</p>
+      <div class="states">
+        <button type="button">Default</button>
+        <button type="button" class="is-hover" tabindex="-1">Hover</button>
+        <button type="button" class="is-focus" tabindex="-1">Focus</button>
+        <button type="button" disabled>Disabled</button>
+      </div>
+      <p>Hover: lighter black. Focus: 3px black outline with a gap (<code>:focus-visible</code>, only for keyboard). Disabled: grey with muted text (4.6 : 1) and a not-allowed cursor.</p>
+
+      <h3>Card</h3>
+      <article>
+        <h4>Glass card</h4>
+        <p><time datetime="2026-11">November 2026</time></p>
+        <p>White 75 % surface, white edge, soft shadow and a blur of the background. Used for news and the picture.</p>
+      </article>
+      <ul>
+        <li>
+          <article>
+            <h4>Highlight card</h4>
+            <p><time datetime="2026-11">November 2026</time></p>
+            <p>The same card with the shimmer gradient: only once per page, for the newest item.</p>
+          </article>
+        </li>
+      </ul>
+
+      <h3>Navigation pill</h3>
+      <nav aria-label="Navigation example">
+        <ul class="nav-demo">
+          <li><a href="#components" aria-current="page">Current page</a></li>
+          <li><a href="#components">Other page</a></li>
+        </ul>
+      </nav>
+      <p>The current page (<code>aria-current="page"</code>) is a black pill, so it is shown by shape and colour, and screen readers announce it.</p>
+
+      <h3>Form field</h3>
+      <form action="#" onsubmit="return false">
+        <p>
+          <label for="sg-name">Name (default)</label>
+          <input id="sg-name" type="text" autocomplete="off">
+        </p>
+        <p>
+          <label for="sg-hover">Name (hover)</label>
+          <input id="sg-hover" type="text" class="field-hover" autocomplete="off">
+        </p>
+        <fieldset>
+          <legend>Radio buttons</legend>
+          <p><input id="sg-r1" type="radio" name="sg-r" checked><label for="sg-r1">Selected</label></p>
+          <p><input id="sg-r2" type="radio" name="sg-r"><label for="sg-r2">Not selected</label></p>
+        </fieldset>
+      </form>
+      <p>Label above the field, field edge 3.4 : 1 (WCAG 1.4.11), darker edge on hover, same focus ring as the button, radios in the brand colour.</p>
+    </section>
+
+    <section aria-labelledby="breakpoints">
+      <h2 id="breakpoints">Breakpoints</h2>
+      <p>Mobile first: one column by default, then two layout changes. In <code>rem</code>, so they move with the user's font size and still work at 400 % zoom. Written directly in the media queries, because custom properties don't work in media query conditions.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th scope="col">From</th><th scope="col">Change</th><th scope="col">Why there</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>0</td><td>one column, nav wraps under the name</td><td>works from 320px</td></tr>
+            <tr><td>40rem (640px)</td><td>news cards side by side</td><td>from here a card is wide enough for its text in two columns</td></tr>
+            <tr><td>64rem (1024px)</td><td>text left, picture right (<code>main:has(&gt; figure)</code>)</td><td>room for the text plus a 20rem picture column</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><small>© 2026 Edgars Zeltmanis · <a href="index.html">Back to the home page</a></small></p>
+  </footer>
+</body>
+</html>
