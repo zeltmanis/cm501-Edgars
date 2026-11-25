@@ -190,6 +190,11 @@ time {
   color: var(--color-text-muted);
 }
 
+/* muted grey is only 3.3 : 1 on the lavender end of the gradient */
+main li:first-child article time {
+  color: var(--color-text);
+}
+
 figcaption {
   margin-top: var(--space-2);
   color: var(--color-text-muted);
