@@ -36,6 +36,30 @@
   --focus-ring: 3px;
   --blur-glass: 12px;
   --target-min: 24px;
+
+  /* native form controls and scrollbars follow the user's light or dark setting */
+  color-scheme: light dark;
+}
+
+/* Dark mode: only the colour tokens change. Misty night blue instead of pure black,
+   light pills instead of black ones, a darker shimmer so light text stays readable. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #15191e;
+    --color-surface: rgb(35 41 49 / 0.8);
+    --color-text: #e6eaee;
+    --color-text-muted: #a2abb6;
+    --color-brand: #e6eaee;
+    --color-brand-hover: #c3cbd3;
+    --color-on-brand: #15191e;
+    --color-success: #5fca8c;
+    --color-line: #2b3239;
+    --color-field-border: #77818c;
+    --color-glass-edge: rgb(255 255 255 / 0.08);
+    --gradient-page: linear-gradient(180deg, #1b2027 0%, #13171b 45%, #15191e 100%);
+    --gradient-shimmer: linear-gradient(120deg, #5b3249 0%, #5e4526 45%, #3d3568 100%);
+    --shadow-card: 0 0.75rem 2rem rgb(0 0 0 / 0.4);
+  }
 }
 
 /* Base */
